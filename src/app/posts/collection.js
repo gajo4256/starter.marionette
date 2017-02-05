@@ -1,6 +1,6 @@
-import RentlioCollection from '../advancedCollection'
+import AdvancedCollection from '../advancedCollection'
 
-export default RentlioCollection.extend({
+export default AdvancedCollection.extend({
     
     url: 'https://jsonplaceholder.typicode.com/posts'
     
