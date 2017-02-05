@@ -2,6 +2,7 @@ import Mn from 'backbone.marionette'
 import template from './template.hbs'
 import UsersView from '../users/view'
 import PostsView from '../posts/view'
+import Collection from '../posts/collection'
 
 export default Mn.View.extend({
     
@@ -16,7 +17,12 @@ export default Mn.View.extend({
     },
     
     showPosts() {
-        this.getRegion('content').show(new PostsView())
+        new Collection().fetch().then(resp =>
+            this.getRegion('content')
+            .show(new PostsView({
+                collection: resp.collection
+            }))
+        )
     }
     
 })

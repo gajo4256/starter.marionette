@@ -1,6 +1,6 @@
-import Bn from 'backbone'
+import RentlioCollection from '../advancedCollection'
 
-export default Bn.Collection.extend({
+export default RentlioCollection.extend({
     
     url: 'https://jsonplaceholder.typicode.com/posts'
     
